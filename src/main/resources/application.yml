@@ -6,6 +6,13 @@ spring:
   docker:
     compose:
       enabled: false
+  batch:
+    job:
+      name: ${job.name}
+
+logging:
+  level:
+    org.springframework.jdbc: debug
 ---
 spring:
   config:
