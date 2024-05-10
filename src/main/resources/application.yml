@@ -1,3 +1,24 @@
 spring:
   application:
     name: spring-batch-example
+  profiles:
+    default: local
+  docker:
+    compose:
+      enabled: false
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  docker:
+    compose:
+      enabled: true
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:13306/batch_example_db
+    username: root
+    password: password
+  batch:
+    jdbc:
+      initialize-schema: always
