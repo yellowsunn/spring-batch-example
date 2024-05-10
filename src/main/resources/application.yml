@@ -10,9 +10,9 @@ spring:
     job:
       name: ${job.name}
 
-logging:
-  level:
-    org.springframework.jdbc: debug
+#logging:
+#  level:
+#    org.springframework.jdbc: debug
 ---
 spring:
   config:
