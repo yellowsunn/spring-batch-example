@@ -29,3 +29,16 @@ spring:
   batch:
     jdbc:
       initialize-schema: always
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:43306/batch_example_db
+    username: root
+    password: 1234
+  batch:
+    jdbc:
+      initialize-schema: always
